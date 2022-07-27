@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: true
+    show-sql: true
+    properties:
+  datasource:
+    url: jdbc:mysql://localhost:3306/batch?serverTimeZone=Asia/Seoul
+    username: root
+    password: 1111
+  batch:
+    job:
+      names: ${job.name:NONE}
+
+logging:
+  level:
+    root: info
+    com.psc.sample : debug
